@@ -1,41 +1,42 @@
-class Animal {
-    constructor(habitat){
-        this.habitat = habitat
+function crearContador () {
+
+    let contar =0;
+
+    function incrementar (){
+        contar++;
+        console.log(contar);
     }
-    comer = () => console.log("Nom nom nom")
+    return incrementar;
 
 }
 
-class Conejo extends Animal {}
+const contador = crearContador();
 
-const conejo = new Conejo ("pradera")
-conejo.comer()
-conejo.habitat
+contador();
+contador();
+contador();
 
 
-class Animal {
-    constructor (habitat){
-        this.habitat = habitat
-    }
-    comer =()=> console.log ("Nom nom nom")
+
+
+
+//Definicion de SCOPE Of the Variables
+
+
+
+
+let miNOmbre = 'The Unbeatable Mach-1'; //Declaración Global
+
+function datosEstudiante(){
+    let edad = 30;//Declaración Local
+    console.log (`Mi nombre es: ${miNOmbre} y tengo ${edad} años.`);
 }
 
 
-class Cangrejo extends Animal {
-constructor(habitat, color){
-    super(habitat)
-    this.color = color
-  }
+console.log(`Mi nombre es: ${miNOmbre}`);
 
-}
+datosEstudiante();
 
 
-class Sheep extends Animal {
-    constructor (habitat, color, size){
-        super(habitat,color)
-        this.size = size
-
-    }
-}
-
-
+//la declaración global se puede llamar desde cualquier función en el codigo
+//sin embargo una variable Local solo se ejecuta dentro de si misma 
