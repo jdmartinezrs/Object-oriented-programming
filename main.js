@@ -1,44 +1,53 @@
-//operadores aritmeticos
-
-let operando1 = 3;
-let operando2 = 2;
-let resultado;
-
-resultado = operando1 +operando2;
-resultado = operando1 - operando2;
-resultado = operando1 / operando2;
-resultado = operando1 ** operando2;
-resultado = ++ operando2;
-
-console.log(resultado);
+let condicion = 2;
 
 
-//operadores de asignación
+if(condicion > 5 ){
+    document.write("codigo en caso de que se cumpla el IF <br>");
+    document.write("codigo en caso de que se cumpla el IF <br>");
+    document.write("codigo en caso de que se cumpla el IF <br>");
+    document.write("codigo en caso de que se cumpla el IF <br>");
 
 
-let rta =5;
-rta -=1;
-console.log(rta);
+}else if(condicion == 2 ){
+    document.write("codigo en caso de que se cumpla el ELSE IF <br>");
+    document.write("codigo en caso de que se cumpla el ELSE IF <br>");
+    document.write("codigo en caso de que se cumpla el ELSE IF <br>");
+    document.write("codigo en caso de que se cumpla el ELSE IF <br>");
+}
+
+else{
+    document.write("codigo en caso de que NO SE cumpla el IF <br>");
+    document.write("codigo en caso de que NO SE cumpla el IF <br>");
+    document.write("codigo en caso de que NO SE cumpla el IF <br>");
+    document.write("codigo en caso de que NO SE cumpla el IF <br>");
+
+}
 
 
-console.log(9<10);
-console.log(10>=10);
-console.log(1===1);
-console.log(10==='10')
-console.log(10!=1)
-console.log(3 != "3")
-console.log(3 === 3 )
+//Usuario ingresa la hora
+//el sistema dice:
+//hora 6 - 12: Buenos dias
+//hora 13 - 18: Buenas tardes
+// resto de horas: buenas noches
 
-//operadores lógicos
+let hora = prompt("Ingrese la hora porfavor:")
+
+if (hora>=6 && hora <=12){
+    console.log(`Buenos dias, la hora es: ${hora} AM`)
+
+}else if (hora>= 13 && hora <= 18){
+    console.log(`Buenas tardes, la hora es ${hora} PM`)
+
+}else if (hora === "14:20"){
+    console.log(`Tomate un break la hora es: ${hora}`)
+
+}else{
+    console.log(`Buenas noches, la hora es: ${hora}`)
+}
 
 
-let op1= true;
-let op2= true;
 
-console.log(op1 && op2);
-console.log();
 
-resultado =(30=="30") ? ''
 
 
 
