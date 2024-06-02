@@ -27,7 +27,19 @@ console.log(uno,dos)
  const[capitan,legend,style,fluidness,deejay,striker]=destrustyle
  console.log(deejay,striker)
 
+
  destrustyle[0]='julio';
+
+// methodos pop,push, shift , unshift
+ destrustyle.push('yulian')
+ destrustyle.pop();
+ destrustyle.unshift('yulian');
+ destrustyle.pop();
+ destrustyle.push('alex');
+ destrustyle.pop();
+ destrustyle.push('mach-1')
+
+
  console.log(destrustyle)
 
 //remplazar datos de un array
@@ -38,11 +50,17 @@ console.log(uno,dos)
  cursos[2]='JS';
  cursos[3]='Database'
  console.log(cursos);
- 
- 
 
 
 
+//Areglos multidimensionales 
 
+let crews = [
 
+    ['mach1','lobo','D-force'],
+    ['sonico','omar','shuky'],
+    ['yeyes','alex','lexnigga']
 
+];
+console.log(crews[0])
+console.log(crews[0][0])
