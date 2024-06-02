@@ -1,66 +1,31 @@
 
-//arreglos/ tipos de dato objeto
 
-let variable = 5;
+let usuario = {
+    nombre: 'davidR10',
+    assignature: 'programation',
+    estudiante: 'AVANZADO',
+    pasaporte: 'true',
+    idiomas:{ingles:'avanzado',
+             espanol:'nativo',
+             portugues: 'basico',
+            extrangero:{
+                ingles: 'avanzado',
+                frances:'medio',
+                aleman: 'bajo'
+            }}
 
-let arreglo = [];
+}
 
+console.log(usuario);
+console.log(usuario.assignature);
+console.log(usuario.estudiante);
 
-//elementos iniciales
-
-
-
-
-//desestructuración básica
-
-const elements = [5,4,3,2,1];
-const [first,second]= elements;
-console.log(first,second)
-
-
-const elemento=['html','css','javascript','python']
-const[cero,uno,dos,tres] = elemento
-console.log (cero,tres)
-console.log(uno,dos)
-
- const destrustyle=['julius','johorks','killajeff','dforce','djrueda','mach1'];
- const[capitan,legend,style,fluidness,deejay,striker]=destrustyle
- console.log(deejay,striker)
+delete usuario.estudiante;
+console.log(usuario);
 
 
- destrustyle[0]='julio';
-
-// methodos pop,push, shift , unshift
- destrustyle.push('yulian')
- destrustyle.pop();
- destrustyle.unshift('yulian');
- destrustyle.pop();
- destrustyle.push('alex');
- destrustyle.pop();
- destrustyle.push('mach-1')
-
-
- console.log(destrustyle)
-
-//remplazar datos de un array
-
- const cursos= ['math','bio','arts','geometry'];
- cursos[0]= 'css';
- cursos[1]= 'html';
- cursos[2]='JS';
- cursos[3]='Database'
- console.log(cursos);
-
-
-
-//Areglos multidimensionales 
-
-let crews = [
-
-    ['mach1','lobo','D-force'],
-    ['sonico','omar','shuky'],
-    ['yeyes','alex','lexnigga']
-
-];
-console.log(crews[0])
-console.log(crews[0][0])
+console.log( usuario.hasOwnProperty('aka'))
+console.log(usuario['pasaporte'])
+console.log(usuario.idiomas.extrangero.ingles);
+console.log(usuario.assignature)
+console.log(usuario.idiomas.extrangero.aleman)
