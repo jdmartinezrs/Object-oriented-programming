@@ -27,7 +27,18 @@ console.log(uno,dos)
  const[capitan,legend,style,fluidness,deejay,striker]=destrustyle
  console.log(deejay,striker)
 
+ destrustyle[0]='julio';
+ console.log(destrustyle)
 
+//remplazar datos de un array
+
+ const cursos= ['math','bio','arts','geometry'];
+ cursos[0]= 'css';
+ cursos[1]= 'html';
+ cursos[2]='JS';
+ cursos[3]='Database'
+ console.log(cursos);
+ 
  
 
 
