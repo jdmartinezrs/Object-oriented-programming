@@ -1,29 +1,44 @@
 class Creature{
-    nombre;
-    vida;
-    vidaMaxima;
-    ataque;
-
-    constructor(nom,vid,vidM,attack){
-        this.nombre = nom;
-        this.vida = vid;
-        this.vidaMaxima = vidM;
-        this.ataque = attack
+    constructor(){
     }
+    
+        set setNombre(name){
+            this.setNombre = name;
+        }
+        set setVida(life){
+            this.setVida = life;
+        }
+        set setVidaMaxima(maxLife){
+            this.setVidaMaxima = maxLife;
+        }
+        set setAtaque(attack){
+            this.setAtaque = attack;
+        }
+    
+    
 
 }
 
 class Hero extends Creature {
-    constructor(nom,vid,vidM,attack){
-super(nom,vid,vidM,attack);
+    constructor(name,life,maxLife,attack){
+    super();
+    this.nombre = name;
+    this.vida = life;
+    this.vidaMaxima = maxLife;
+    this.ataque = attack;
     }
 
 }
 let hero1 = new Hero  ("davidR10",95, 100,"Kick")
 
+
 class Monster extends Creature{
-    constructor(nom,vid,vidM,attack){
-        super(nom,vid,vidM,attack);
+    constructor(name,life,maxLife,attack){
+        super();
+        this.nombre = name;
+        this.vida = life;
+        this.vidaMaxima = maxLife;
+        this.ataque = attack;
     }
     
 }
