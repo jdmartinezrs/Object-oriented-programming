@@ -1,49 +1,16 @@
-class Creature{
-    constructor(){
-    }
-    
-        set setNombre(name){
-            this.setNombre = name;
-        }
-        set setVida(life){
-            this.setVida = life;
-        }
-        set setVidaMaxima(maxLife){
-            this.setVidaMaxima = maxLife;
-        }
-        set setAtaque(attack){
-            this.setAtaque = attack;
-        }
-    
-    
+import { Creature } from "./js/creature.js";
+import { Hero } from "./js/hero.js";
+import { Monster } from "./js/monster.js";
 
-}
-
-class Hero extends Creature {
-    constructor(name,life,maxLife,attack){
-    super();
-    this.nombre = name;
-    this.vida = life;
-    this.vidaMaxima = maxLife;
-    this.ataque = attack;
-    }
-
-}
 let hero1 = new Hero  ("davidR10",95, 100,"Kick")
 
 
-class Monster extends Creature{
-    constructor(name,life,maxLife,attack){
-        super();
-        this.nombre = name;
-        this.vida = life;
-        this.vidaMaxima = maxLife;
-        this.ataque = attack;
-    }
-    
-}
 let monster1 = new Monster ("Goblin",80,90,"Achazo");
-let monster2 = new Monster ("Orco",80,90,"Puño");
-let monster3 = new Monster ("Kobold",80,90,"trueno");
+let monster2 = new Monster ("Orco",50,70,"Puño");
+let monster3 = new Monster ("Kobold",60,40,"trueno");
 
 console.log(hero1);
+console.log(monster1);
+console.log(monster2);
+console.log(monster3);
+
