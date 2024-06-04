@@ -1,6 +1,7 @@
 import { Creature } from "./js/creature.js";
 import { Hero } from "./js/hero.js";
 import { Monster } from "./js/monster.js";
+import { Game } from "./js/game.js";
 
 let hero1 = new Hero  ("davidR10",95, 100,"Kick")
 
