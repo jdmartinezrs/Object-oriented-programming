@@ -24,6 +24,7 @@ export class Creature{
 
 
 
+
 // export class Creature{
 
 //     constructor(nombre,vida,vidaMaxima,ataque){
