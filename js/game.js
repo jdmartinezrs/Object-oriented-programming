@@ -1,5 +1,4 @@
 import { Creature } from "./creature.js";
-
 import { Hero } from "./hero.js";
 import { Monster } from "./monster.js";
 
@@ -17,8 +16,8 @@ export class Battle {
   }
 
   atacar(atacante, atacado, tipoAtaque) {
-    const damage = atacante.ataque;
-    atacado.vida -= damage;
+    let damage = atacante.ataque;
+    atacado.vidaMaxima -= damage;
 
     this.mostrarEstado(atacante, atacado, tipoAtaque);
 
@@ -44,13 +43,13 @@ export class Battle {
       `${atacante.nombre} ataca a ${atacado.nombre} con ${tipoAtaque}!`
     );
     console.log(
-      `${atacado.nombre} tiene  ${atacado.vidaMaxima} de vida restante.`   
+      `${atacado.nombre}  ${atacado.vidaMaxima} de vida restante.`   
     );
-    // ${atacado.vida} de
+    
   }
 
   start() {
-    while (this.hero.vida > 0 && this.currentMonster.vida > 0) {
+    while (this.hero.vidaMaxima > 0 && this.currentMonster.vidaMaxima > 0) {
       // Alternate turns between hero and monster
       this.atacar(this.hero, this.currentMonster, this.hero.ataque);
       if (this.currentMonster.vida > 0) {
