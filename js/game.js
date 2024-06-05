@@ -11,13 +11,14 @@ export class Battle {
   }
 
   getRandomMonster() {
-    const randomIndex = Math.floor(Math.random() * this.monsters.length);
+    let randomIndex = Math.floor(Math.random() * this.monsters.length);
     return this.monsters[randomIndex];
   }
 
   atacar(atacante, atacado, tipoAtaque) {
-    let damage = atacante.ataque;
-    atacado.vidaMaxima -= damage;
+    let damage = atacante.ataqueKick;
+    
+    atacado.vida -= damage;
 
     this.mostrarEstado(atacante, atacado, tipoAtaque);
 
@@ -43,13 +44,13 @@ export class Battle {
       `${atacante.nombre} ataca a ${atacado.nombre} con ${tipoAtaque}!`
     );
     console.log(
-      `${atacado.nombre}  ${atacado.vidaMaxima} de vida restante.`   
+      `${atacado.nombre}  ${atacado.vida} de vida restante.`   
     );
     
   }
 
   start() {
-    while (this.hero.vidaMaxima > 0 && this.currentMonster.vidaMaxima > 0) {
+    while (this.hero.vida > 0 && this.currentMonster.vida > 0) {
       // Alternate turns between hero and monster
       this.atacar(this.hero, this.currentMonster, this.hero.ataque);
       if (this.currentMonster.vida > 0) {
